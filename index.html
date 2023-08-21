@@ -1,26 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <style>
-    body {
-      text-align: center;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    div {
-      width: 20%;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-    }
-    button {
-      width: 100%;
-      margin: 10px 0px 5px 0px;
-    }
+    <style>
+        body {
+          text-align: center;
+          font-family: Arial, Helvetica, sans-serif;
+          background-color: #f0f0f0;
+        }
+        div {
+          width: 20%;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          background-color: white;
+          border-radius: 10px;
+          padding: 20px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        button {
+          width: 100%;
+          margin: 10px 0px 5px 0px;
+          padding: 10px;
+          background-color: #007bff;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #0056b3;
+        }
+        img {
+          width: 100px;
+          height: 100px;
+          margin: 20px auto;
+          animation: rotate 2s infinite linear;
+        }
+        @keyframes rotate {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
   </style>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ThioyeMariko's dApp</title>
+  <title>ThioyeMariko's dApp</title></title>
   <script src="https://cdn.ethers.io/lib/ethers-5.7.2.umd.min.js"></script>
 </head>
 <body>
@@ -32,6 +60,8 @@
     <button onclick="getMood()">Get Mood</button>
     <button onclick="setMood()">Set Mood</button>
     <p id="showMood"></p>
+    <img src="./PHOTO PP.PNG" alt="Rotating Image" />
+  </div>
   </div>
 
   <script>
